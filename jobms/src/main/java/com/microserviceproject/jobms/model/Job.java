@@ -23,9 +23,7 @@ public class Job {
     private String jobDescription;
     private Double minSalary;
     private Double maxSalary;
-
-    @ManyToOne
-    private Company company;
+    private Long  companyId;
 
     public Job() {
 
@@ -38,5 +36,6 @@ public class Job {
         this.setMinSalary(updatedJob.getMinSalary());
         this.setMaxSalary(updatedJob.getMaxSalary());
         this.setJobDescription(updatedJob.getJobDescription());
+        this.setCompanyId(updatedJob.getCompanyId());
     }
 }
